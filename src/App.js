@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import OnlineHlsPlayer from './OnlineHlsPlayer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>HLS Video Player</h1>
+      <OnlineHlsPlayer
+        src="https://ar-127-bucket-output-video.s3.amazonaws.com/sample_960x400_ocean_with_audio.m3u8"
+        autoPlay={true}
+        controls={false}
+        width="640"
+        height="360"
+      />
     </div>
   );
 }
